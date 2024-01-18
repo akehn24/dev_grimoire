@@ -1,0 +1,232 @@
+# Markdown Guide
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
+Another Way To Do Headers 1
+===========================
+And Header 2
+------------
+
+###### Set Custom ID to Header to link to it later {#123}
+
+### Table of Contents
+Use custom header IDs to make a TOC.
+- [Paragraphs]{#paragraphs}
+- [Text Formatting]{#formatting}
+- [Lists]{#lists}
+- [Blockquotes]{#blockquotes}
+- [Codeblocks]{#codeblocks}
+- [Elements in Lists]{#listelements}
+- [Line Separators]{#separators}
+- [Links]{#links}
+- [Escaped Characters]{#escaped}
+- [Tables]{#tables}
+- [Footnotes]{#footnotes}
+- [Non-Common Text Formatting]{#uncommon}
+- [Commenting Markdown]{#comments}
+- [Admonitions]{#admonitions}
+
+### Paragraphs {#paragraphs}
+This is how you make paragraphs in Markdown.
+
+Blank lines separate paragraphs.
+
+Line breaks are done  
+with 2+ spaces  
+at the end of  
+each line.  
+
+There isn't a good way of indenting paragraphs since
+tab and spaces are taken. If your Markdown processor
+supports HTML, you can do something goofy like this:
+&nbsp;&nbsp;&nbsp;&nbsp;Indented text....?
+
+You can also use HTML to center paragraph text
+<center>if you're able to use it.<\center>
+The HTML center tag has been deprecated, so it won't work
+for much longer if it does now. 
+<p style="text-aling:center">CSS might work, but not all allow it.<\p>
+
+### Text Formatting {#formatting}
+**Bold**
+__Bold__
+Use ast**eri**sks for bold inside a word.
+
+*Italicized*
+_Italicized_
+Use ast*eri*sks for italics inside a word.
+
+***Bold and italic***
+___Bold and italic___
+__*Bold and italic*__
+**_Bold and italic_**
+
+~~Strikethrough~~
+
+Underline using <ins>HTML tags</ins> if they're supported by your Markdown processor.
+
+### Lists {#lists}
+Lists need to start with the number 1, but after that the numbers don't matter.
+1. First
+    1. First.2
+    2. First.3
+2. Second
+3. Third
+
+1. First
+1. Second
+1. Third
+
+1. First
+    - Unordered inside
+    - An ordered list
+8. Second
+4. Third
+
+- First
+    - First 2
+    - First 3
+- Second
+
+* First
+* Second
+
++ First
++ Second
+
+- 1986\. If you need to start
+- a list with a number and a period
+
+- [ ] Task
+- [x] Lists
+
+### Blockquotes {#blockquotes}
+> Blockquotes
+> 
+> can have multilines, start each line with '>'
+
+> Nested
+>
+>> Blockquote
+
+> ###### Blockquote Header
+> 
+> - You can even do
+> - bullets in here!
+> 
+> You can do *most* text formatting in **blockquotes**.
+
+### Codeblocks {#codeblocks}
+`This is how you make codeblocks`
+
+    Indent 4 spaces to make
+    something a multiline codeblock.
+
+``Double up `if` you want to use backticks.``
+
+```json
+You can also make codeblocks
+like this.
+```
+
+### Elements in Lists {#listelements}
+* First
+* Second
+
+    Indent this line to have it within the list but not part of it.
+
+* Third
+* Fourth
+    > Blockquote inside a list.
+* Fifth
+
+* First
+        Indent codeblocks 8 spaces when in a list
+* Second
+
+### Line Separators {#separators}
+***
+---
+___
+
+3+ of the above make a line.
+Put spaces around them to keep them from making headers.
+
+### Links {#links}
+[Linking to Headers](#123)
+
+[Google](https://www.google.com "The text that shows when you hover over the link.") is a search engine.
+<annie@email.com>
+<https://make-a-quick-url.com>
+
+Some Markdown processors automatically link URLS. Use backticks to stop that.
+`https://www.google.com`
+
+### Escaped Characters {#escaped}
+\\
+\`
+\*
+\_
+\{ \}
+\[ \]
+\< \> -> check, not working?
+\( \)
+\#
+\+
+\- 
+\.
+\!
+\| -> check, not working?
+
+### Tables {#tables}
+| Name | Me |
+| ---- | -- | 
+| Annie | Yes|
+| Widths can | Vary and it's ok |
+| Escape Pipes | Using its HTML | char code <br><\br> &#124; |
+| HTML lets you | put lists | in your tables: <ul><li>First<\li><li>Second<\li><\ul>|
+
+| Left | Center | Right|
+| :--- | :----: | ---: |
+| Left Aligned | Centered | Right Aligned |
+
+Help with tedious tables: <https://www.tablesgenerator.com/markdown_tables>
+
+### Footnotes {#footnotes}
+Footnotes let you add notes [^1] to your notes for lack of a better word.[^bignote]
+
+[^1]: You put your footnotes down here
+[^bignote]: And they auto-link from your
+    above text to here.
+    Use indents to include extra lines in the footnote.
+
+    Add as much text as you like to the bignote footnote.
+
+### Non-Common Text Formatting {#uncommon}
+Not all Markdown processors let you do these, but keeping note because they're useful.
+
+Use emojis like most other places :joy:
+
+Highlighting ==important stuff==.
+
+Subscript for chemicals - H~2~0
+
+Superscript for maths - 2^4^
+
+### Commenting Markdown {#comments}
+You can add comments
+[to Markdown that]: #
+will not show when rendered.
+
+### Admonitions {#admonitions}
+> :warning: **Warning**: This is what a warning block looks like.
+
+> :memo: **Note**: This is what a note block looks like.
+
+> :bulb: **Tip**: Lightbulbs give you ideas!
+
+---
+Credit: https://www.markdownguide.org/
